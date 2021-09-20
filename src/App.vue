@@ -3,6 +3,7 @@
     <Header />
     <Links />
     <Content />
+    <BuyBar />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Header from "./components/header.vue";
 import Links from "./assets/data/Links.js";
 import Content from "./components/content.vue";
+import BuyBar from "./components/buy-bar.vue";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     Header,
     Links,
     Content,
+    BuyBar,
   },
 };
 </script>

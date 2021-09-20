@@ -33,7 +33,8 @@ export default {
 @import "@/style/colors";
 
 .header {
-  @include space-around();
+  @include center-content();
+  @include space-between();
 }
 
 h3 {

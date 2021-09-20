@@ -4,7 +4,7 @@
     <div class="links">
       <ul>
         <li v-for="(link, index) in links" :key="index">
-          <a href="link.url">
+          <a :class="link.current ? `active` : null" :href="link.url">
             {{ link.text }}
           </a>
         </li>
@@ -28,6 +28,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "@/style/generals";
 @import "@/style/mixins";
 @import "@/style/colors";
 
@@ -54,7 +55,8 @@ a {
   color: #303030;
   font-weight: bold;
   padding-bottom: 50px;
-  &:hover {
+  &:hover,
+  &.active {
     color: $primary;
     border-bottom: 5px solid $primary;
   }

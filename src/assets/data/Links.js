@@ -7,7 +7,7 @@ const headerLinks = [
   {
     text: "comics",
     url: "#",
-    current: false,
+    current: true,
   },
   {
     text: "movies",

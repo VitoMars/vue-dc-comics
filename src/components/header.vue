@@ -28,6 +28,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "@/style/mixins";
+
+.header {
+  @include space-around();
+}
+
 h3 {
   margin: 40px 0 0;
 }
@@ -38,8 +44,12 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+
+  text-transform: uppercase;
 }
 a {
-  color: #42b983;
+  text-decoration: none;
+  color: #303030;
+  font-weight: bold;
 }
 </style>

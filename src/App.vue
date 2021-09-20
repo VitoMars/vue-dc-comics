@@ -1,23 +1,20 @@
 <template>
   <div id="app">
     <Header />
-    <Links />
     <Content />
     <BuyBar />
   </div>
 </template>
 
 <script>
-import Header from "./components/header.vue";
-import Links from "./assets/data/Links.js";
-import Content from "./components/content.vue";
-import BuyBar from "./components/buy-bar.vue";
+import Header from "./components/1_header.vue";
+import Content from "./components/2_content.vue";
+import BuyBar from "./components/3_buy-bar.vue";
 
 export default {
   name: "App",
   components: {
     Header,
-    Links,
     Content,
     BuyBar,
   },

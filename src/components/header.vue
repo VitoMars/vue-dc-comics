@@ -29,6 +29,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "@/style/mixins";
+@import "@/style/colors";
 
 .header {
   @include space-around();
@@ -48,8 +49,14 @@ li {
   text-transform: uppercase;
 }
 a {
+  font-size: 18px;
   text-decoration: none;
   color: #303030;
   font-weight: bold;
+  padding-bottom: 50px;
+  &:hover {
+    color: $primary;
+    border-bottom: 5px solid $primary;
+  }
 }
 </style>

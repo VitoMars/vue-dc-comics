@@ -24,7 +24,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/style/mixins";
 .img-box {
-  height: 250px;
+  height: 270px;
   width: 200px;
   padding: 0px 10px;
   cursor: pointer;

@@ -59,6 +59,8 @@ export default {
 .content {
   @include center-content();
   @include space-between();
+  @include align-center();
+  flex-wrap: wrap;
   height: 200px;
   width: 100%;
   font-size: 20px;

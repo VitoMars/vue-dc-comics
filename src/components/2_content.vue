@@ -8,18 +8,23 @@
         :text="comic.series"
       />
     </div>
+    <div>
+      <Button />
+    </div>
   </div>
 </template>
 
 <script>
 import Card from "@/components/Card.vue";
 import series from "@/assets/data/dc-comics.js";
+import Button from "@/components/StandardButton.vue";
 
 export default {
   name: "content",
   props: {},
   components: {
     Card,
+    Button,
   },
   data() {
     return {
@@ -36,15 +41,15 @@ export default {
 
 .container-black {
   background-color: $light-black;
+  margin-top: 20px;
+  padding: 40px 0px;
 }
 
 .content {
   @include center-content();
-  @include align-center();
+  @include center();
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 20px;
-  padding: 40px 0px;
   color: white;
 }
 </style>

@@ -9,8 +9,8 @@
         :text="comic.series"
       />
     </div>
-    <div>
-      <Button />
+    <div class="button">
+      <button class="standardButton">Load More</button>
     </div>
   </div>
 </template>
@@ -18,14 +18,12 @@
 <script>
 import Card from "@/components/Card.vue";
 import series from "@/assets/data/dc-comics.js";
-import Button from "@/components/StandardButton.vue";
 
 export default {
   name: "content",
   props: {},
   components: {
     Card,
-    Button,
   },
   data() {
     return {
@@ -65,5 +63,18 @@ export default {
   flex-wrap: wrap;
   width: 100%;
   color: white;
+}
+
+.standardButton {
+  @include center-content();
+  @include center();
+  width: 200px;
+  background-color: $primary;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 </style>

@@ -1,7 +1,11 @@
 <template>
   <div class="card">
     <div class="img-box">
-      <img :src="imgUrl" :alt="text + 'thumb'" />
+      <div
+        class="img"
+        :style="{ 'background-image': 'url(' + imgUrl + ')' }"
+      ></div>
+      <!-- <img :src="imgUrl" /> -->
       <p>{{ text }}</p>
     </div>
   </div>
@@ -23,13 +27,19 @@ export default {
   height: 250px;
   width: 200px;
   padding: 0px 10px;
-  font-size: 14px;
+  cursor: pointer;
 }
-img {
-  @include center();
-  flex-wrap: wrap;
+.img {
   height: 175px;
   width: 175px;
+  background-size: cover;
+  background-position: center top;
+}
+img {
+  height: 175px;
+  width: 175px;
+  //   background-size: cover;
+  //   background-position: center top;
 }
 p {
   padding-top: 20px;

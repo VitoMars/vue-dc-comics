@@ -32,9 +32,10 @@ export default {
 <style lang="scss" scoped>
 @import "@/style/generals";
 @import "@/style/mixins";
+@import "@/style/colors";
 
 .container-black {
-  background-color: black;
+  background-color: $light-black;
 }
 
 .content {

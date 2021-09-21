@@ -1,13 +1,31 @@
 <template>
   <div class="container-black">
-    <div class="content">--> Content goes here</div>
+    <div class="content">
+      <Card
+        v-for="(comic, index) in comics"
+        :key="index"
+        :img-url="comic.thumb"
+        :text="comic.series"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import Card from "@/components/Card.vue";
+import series from "@/assets/data/dc-comics.js";
+
 export default {
   name: "content",
   props: {},
+  components: {
+    Card,
+  },
+  data() {
+    return {
+      comics: series,
+    };
+  },
 };
 </script>
 
@@ -22,11 +40,10 @@ export default {
 .content {
   @include center-content();
   @include align-center();
-  height: 200px;
+  flex-wrap: wrap;
   width: 100%;
   margin-top: 20px;
-  font-size: 25px;
-  font-weight: bold;
+  padding: 40px 0px;
   color: white;
 }
 </style>

@@ -1,15 +1,13 @@
 <template>
   <div class="container-black">
-    <div class="series">Current Series</div>
     <div class="content">
+      <div class="box-primary">Current Series</div>
       <Card
         v-for="(comic, index) in comics"
         :key="index"
         :img-url="comic.thumb"
         :text="comic.series"
       />
-    </div>
-    <div class="button">
       <button class="standardButton">Load More</button>
     </div>
   </div>
@@ -39,16 +37,24 @@ export default {
 @import "@/style/colors";
 
 .container-black {
-  position: relative;
   background-color: $light-black;
   margin-top: 20px;
   padding: 40px 0px;
 }
 
-.series {
+.content {
+  position: relative;
+  @include center-content();
+  @include center();
+  flex-wrap: wrap;
+  width: 100%;
+  color: white;
+}
+
+.box-primary {
   position: absolute;
-  top: -20px;
-  left: 17%;
+  top: -60px;
+  left: 0;
   font-size: 20px;
   padding: 10px 30px;
   color: white;
@@ -57,17 +63,7 @@ export default {
   background-color: $primary;
 }
 
-.content {
-  @include center-content();
-  @include center();
-  flex-wrap: wrap;
-  width: 100%;
-  color: white;
-}
-
 .standardButton {
-  @include center-content();
-  @include center();
   width: 200px;
   background-color: $primary;
   color: white;

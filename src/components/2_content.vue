@@ -1,5 +1,6 @@
 <template>
   <div class="container-black">
+    <div class="series">Current Series</div>
     <div class="content">
       <Card
         v-for="(comic, index) in comics"
@@ -40,9 +41,22 @@ export default {
 @import "@/style/colors";
 
 .container-black {
+  position: relative;
   background-color: $light-black;
   margin-top: 20px;
   padding: 40px 0px;
+}
+
+.series {
+  position: absolute;
+  top: -20px;
+  left: 17%;
+  font-size: 20px;
+  padding: 10px 30px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: $primary;
 }
 
 .content {
